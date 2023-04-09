@@ -12,6 +12,7 @@ populateFormData();
 
 function onSubmit(evt) {
     evt.preventDefault();
+ 
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
 }
