@@ -12,7 +12,12 @@ populateFormData();
 
 function onSubmit(evt) {
     evt.preventDefault();
- 
+    const email = evt.currentTarget.elements.email.value;
+    const message = evt.currentTarget.elements.message.value;
+
+    if (!email || !message) {
+     alert("Fill all fields!")
+ };
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
 }
