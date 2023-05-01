@@ -19,9 +19,6 @@ player.setCurrentTime(currentTime || 0);
 
 
 
-
-
-
-// if (currentTime !== null) {
+// if (currentTime) {
 //   player.setCurrentTime(currentTime);
 // }

@@ -24,15 +24,15 @@ function onSubmit(evt) {
 
 function onInput(evt) {
     data[evt.target.name] = evt.target.value;
-   
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
 function populateFormData() {
-    const savedData = localStorage.getItem(STORAGE_KEY);
-    if (savedData) {
-        const parsedData = JSON.parse(savedData);
-        formEl.elements.email.value = parsedData.email;
-        formEl.elements.message.value = parsedData.message;
+    const parsedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+   
+    if (parsedData) { 
+        formEl.elements.email.value = parsedData.email || '';
+        formEl.elements.message.value = parsedData.message || '';
     }
 }
+
